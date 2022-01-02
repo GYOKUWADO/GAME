@@ -22,27 +22,37 @@ def SanmaimeNoCard():
 
 def B():
          master_card_of_two_A = master_card + list_x[7]
+         print("合計は",master_card_of_two_A,"です。")
          if str(master_card_of_two_A)[-1] == str(9):
-          print("合計は",master_card_of_two_A,"です。")
-          print("引けです。")
-          if str(master_card_of_two_A)[-1] > str(test)[-1]:
+          if str(master_card_of_two_A)[-1] == str(test)[-1]:
+           print("引けです。")
+          elif str(master_card_of_two_A)[-1] > str(test)[-1]:
            print("親の勝ちです")
            exit()
+          exit()
          elif str(master_card_of_two_A)[-1] < str(test)[-1]:
           print("三枚目を引きます。")
+          time.sleep(5)
+          print("親の三枚目のカードは",list_x[8],"です。")
           master_card_of_three = master_card_of_two_A + list_x[8]
           print("合計は",master_card_of_three,"です。")
-          if str(master_strcard_of_three)[-1] > str(test)[-1]:
+          if str(master_card_of_three)[-1] > str(test)[-1]:
            print("親の勝ちです")
            exit()
+          elif str(master_card_of_two_A)[-1] == str(test)[-1]:
+           print("引けです。")
          elif str(master_card_of_two_A)[-1] <= str(8):
           if  str(master_card_of_two_A)[-1] == str(test)[-1]:
            print("三枚目を引きます。")
+           time.sleep(5)
+           print("親の三枚目のカードは",list_x[8],"です。")
            master_card_of_three = master_card_of_two_A + list_x[8]
            print("合計は",master_card_of_three,"です。")
            if str(master_card_of_three)[-1] > str(test)[-1]:
             print("親の勝ちです")
             exit()
+         elif str(master_card_of_two_A)[-1] > str(test)[-1]:
+          print("親の勝ちです")
 
 def master_card_of_two():
         time.sleep(5)
@@ -131,16 +141,16 @@ def E():
     ESC()
    elif str(test_b)[-1] == str(1):
     D()
-    master_card_of_two()
+    #master_card_of_two()
    elif str(test_b)[-1] == str(2):
     D()
-    master_card_of_two()
+    #master_card_of_two()
    elif str(test_b)[-1] == str(3):
     D()
-    master_card_of_two()
+    #master_card_of_two()
    elif str(test_b)[-1] == str(4):
     D()
-    master_card_of_two()
+    #master_card_of_two()
    elif str(test_b)[-1] == str(5):
     NextCard_A()
    elif str(test_b)[-1] == str(6):
@@ -173,6 +183,8 @@ def C():
             exit()
           elif str(NimaimeMaster_card)[-1] < str(test_a)[-1]:
            print("三枚目を引きます。")
+           time.sleep(5)
+           print(list_x[7],"です。")
            master_card_of_three = NimaimeMaster_card + list_x[7]
            print("合計は",master_card_of_three,"です。")
            if str(master_card_of_three)[-1] > str(test_a)[-1]:
@@ -181,6 +193,8 @@ def C():
           elif str(master_card_of_three)[-1] <= 8:
            if  str(master_card_of_three)[-1] == str(test_a)[-1]:
             print("三枚目を引きます。")
+            time.sleep(5)
+            print(list_x[7],"です。")
             master_card_of_three = NimaimeMaster_card + list_x[7]
             print("合計は",master_card_of_three,"です。")
             if str(master_card_of_three)[-1] > str(test_a)[-1]:
